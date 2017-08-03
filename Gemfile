@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails'
 gem 'sass-rails'
 gem 'uglifier'
@@ -10,17 +9,14 @@ gem 'bcrypt'
 gem 'oj'
 gem 'multi_json'
 gem 'redis'
-gem 'sidekiq'
-gem 'sidekiq-failures'
 gem 'pg'
 gem 'angular-rails-templates'
 gem 'activerecord-import'
-gem "api-versions"
-gem 'swagger-docs'
 gem 'responders'
 gem 'state_machines-activerecord'
-gem 'rollbar'
 gem 'rcsv'
+gem 'sqlite3'
+gem "api-versions"
 
 group :production do
   gem 'thin'
@@ -29,12 +25,6 @@ end
 group :development, :test do
   gem 'api_matchers'
   gem 'pry-rails'
-  gem 'capistrano'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano-rvm'
-  gem 'capistrano-thin'
-  gem 'capistrano-sidekiq'
   gem 'letter_opener'
   gem 'guard-rspec'
   gem 'rb-fsevent'

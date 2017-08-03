@@ -1,18 +1,1 @@
-.page.page-core.page-login ng-if="showLogin"
-  .container.w-420.p-15.bg-white.mt-40.text-center
-    h2.text-light.text-primary
-      span  Log In
-    div
-      form.form-validation.mt-20 name="loginForm" novalidate="" role="form"
-        .form-group
-          input.form-control.underline-input name="email" ng-minlength="3" ng-model="email" placeholder="Email" required="" type="email" /
-          p.help-block.text-left
-            span ng-show=("loginForm.email.$invalid && !loginForm.email.$pristine")  Email is required.
-            span ng-show="loginForm.email.$error.minlength"  Email is too short.
-        .form-group
-          input.form-control.underline-input name="password" ng-minlength="4" ng-model="pass" placeholder="Password" required="" type="password" /
-          p.help-block.text-left
-            span ng-show=("loginForm.password.$invalid && !loginForm.password.$pristine")  Password is required.
-            span ng-show="loginForm.password.$error.minlength"  Password is too short.
-        .form-group.text-left.mt-20
-          button.btn.btn-primary.b-0.br-2.mr-5 ng-click="login(email,pass,rememberMe)" ng-disabled="loginForm.$invalid" type="submit"  Login
+h2 hello world
