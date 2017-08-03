@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TruckRms</title>
+    <base href="/" />
+    <%= csrf_meta_tags %>
+    <link href="/icons/icon.css" rel="stylesheet">
+
+    <%= stylesheet_link_tag    'application'%>
+    <%= javascript_include_tag 'application'%>
+  </head>
+
+  <body ng-app="client" ng-class="bodyClass" class="appWrapper header-fixed aside-fixed">
+    <div ui-view></div>
+    <div id="pageloader" page-loader></div>
+    <div growl limit-messages="1"></div>
+  </body>
+
+</html>

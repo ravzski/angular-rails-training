@@ -1,0 +1,20 @@
+rspec:
+  image: ruby:2.4.0
+  services:
+    - postgres:9.5.0
+    - redis:2.8
+  variables:
+    POSTGRES_DB: test_db
+    POSTGRES_USER: runner
+    POSTGRES_PASSWORD: ""
+
+  before_script:
+    - cp config/database.yml.sample config/database.yml
+    - cp config/redis.yml.sample config/redis.yml
+    - apt-get update -q && apt-get install nodejs -yqq
+    - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
+    - gem install bundler --no-ri --no-rdoc
+    - RAILS_ENV=test bundle install --path .ci_cache
+    - RAILS_ENV=test bundle exec rake db:create db:schema:load
+  script:
+    - RAILS_ENV=test bundle exec rake

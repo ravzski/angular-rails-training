@@ -1,0 +1,40 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: png_dev
+  username: postgres
+  password: admin
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  host: postgres
+  username: runner
+  password: ""
+  database: test_db
+
+staging:
+  adapter: postgresql
+  encoding: utf8
+  database: png_stag
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: png_dev
+  username: postgres
+  password: admin
+  host: localhost
+
+docker:
+  adapter: postgresql
+  encoding: utf8
+  database: pngtrucking_db_1
+  username: postgres
+  password:
+  post: 5433
+  host: db

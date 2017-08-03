@@ -1,0 +1,18 @@
+angular.module(
+  'client',
+  [
+    'ngSanitize',
+    'ui.router',
+    'templates',
+    'ngResource',
+    'ui.bootstrap',
+    'ngAnimate',
+    'ngEnter',
+    'angular-growl',
+    'NgActive',
+    'ui.select',
+    'DatePicker',
+    'colorpicker.module',
+    'ngFileUpload',
+  ]
+)
